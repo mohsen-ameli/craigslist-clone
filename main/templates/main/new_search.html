@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% block content %}
+    <br>
+    <h1 style="text-align: center">You searched for : "{{ search }}"</h1>
+    <br />
+
+    <div class="row">
+        {% for post in posts %}
+            <div class="col-xs-12 col-sm-10 col-md-6 col-lg-4 col-xl-4">
+                <div class="card">
+                    <div class="card-image">
+                        <a href="{{ post.2 }}">
+                            <img src="{{ post.3 }}" class="card-img-top">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <a href="{{ post.2 }}">
+                                {{ post.0 }}
+                            </a>
+                        </div>
+                        <hr/>
+                        <div class="footer">
+                            <div class="text-muted">
+                                {{ post.1 }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
