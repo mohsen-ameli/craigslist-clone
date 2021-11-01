@@ -128,11 +128,5 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# white noise stuff
-WHITENOISE_USE_FINDERS = True
-
 # Activate Django-Heroku.
 django_heroku.settings(locals())
-
-#  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = "whitenoise.django.GzipManifestStaticFilesStorage"
