@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-u8e%@&18eth1$+&kqf77=)1)bi*1mbm(@wt-rs3@q$%hj#9k&4"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://nice-craigslist.herokuapp.com/"]
 
 
 # Application definition
@@ -128,8 +128,11 @@ STATIC_URL = "/static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# white noise stuff
+WHITENOISE_USE_FINDERS = True
+
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.django.GzipManifestStaticFilesStorage"
