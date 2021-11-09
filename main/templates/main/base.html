@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Craigslist</title>
+
+    <script type="text/javascript">var user = '{{request.user}}'</script>
 </head>
 <body>
     {% include 'main/navbar.html' %}
-    {% include 'main/home.html' %}
 
     <br/>
     <div class="container">
@@ -30,7 +31,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
     <script src="https://kit.fontawesome.com/5f5fa5bcd8.js"></script>
+
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 import requests
+from crum import get_current_user
 from bs4 import BeautifulSoup
 from django.shortcuts import render
 from requests.compat import quote_plus
@@ -7,7 +8,8 @@ craigslist = "https://toronto.craigslist.org/d/for-sale/search/sss?query={}"
 
 
 def home(request):
-    return render(request, "main/base.html")
+    user = request.user
+    return render(request, "main/home.html", {"user": user})
 
 
 def search(request):

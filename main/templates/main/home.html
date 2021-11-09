@@ -1,3 +1,4 @@
+{% include "main/base.html" %}
 <div class="container">
     <br>
     <h1 style="text-align: center">Welcome !</h1>
@@ -14,7 +15,7 @@
         <div class="col-xl-4 text-center">
             <!-- Promo Content 2 goes here -->
             <i class="fab fa-canadian-maple-leaf" style="font-size: 100px; color: rgb(155, 42, 13)"></i>
-            <h5>Accable In Toronto</h5>
+            <h5>Accessible In Toronto</h5>
             <p class="light center">Search For Anything In GTA.</p>
         </div>
     
@@ -26,7 +27,7 @@
         </div>
     </div>
 
-    <form action="{% url 'search-url' %}" method="post" style="text-align: center">{% csrf_token %}
+    <form action="{% url 'main:search-url' %}" method="post" style="text-align: center">{% csrf_token %}
         <br />
         <input class="form-control" size="75%" type="text" placeholder="Search" name="q" style="text-align: center">
         <br>

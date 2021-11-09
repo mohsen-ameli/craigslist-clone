@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="card text-white bg-dark mb-3" style="max-width: 27rem;">
+            <div class="card-header text-center text-capitalize"><h3>You have been logged out !</h3></div>
+                <div class="card-body">
+                    <a class="btn btn-outline-warning" href="{% url 'login' %}">Log In Again</a>
+                    <a class="btn btn-outline-warning" href="{% url 'main:home' %}">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
